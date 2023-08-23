@@ -1,6 +1,7 @@
 import CompleteStopGroup from "./components/CompleteStopGroup.jsx";
 import SubmitButton from "./components/SubmitButton.jsx";
 import ViewOnGitHub from "./components/ViewOnGitHub.jsx";
+import PasteBox from "./components/PasteBox";
 import { useState, useEffect } from "react";
 import './App.css';
 
@@ -70,6 +71,14 @@ function App() {
           </div>
         ))}
         <SubmitButton definedStops={definedStops} />
+
+        <PasteBox
+              
+              numberOfStops={numberOfStops}
+              setNumberOfStops={setNumberOfStops}
+              definedStops={definedStops}
+              setDefinedStops={setDefinedStops}
+            />
        
         <ViewOnGitHub />
        
