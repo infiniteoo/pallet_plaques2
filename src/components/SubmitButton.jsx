@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import axios from "axios";
- 
-
 
 const SubmitButton = ({ definedStops }) => {
   const [pdfData, setPdfData] = useState(null);
@@ -10,12 +8,17 @@ const SubmitButton = ({ definedStops }) => {
     console.log("Submit button clicked");
 
     try {
-   
       const response = await axios.post(
-        "164.92.107.159/api/stops",
+        "https://164.92.107.159/api/stops",
         definedStops,
         {
           responseType: "blob", // Request the response as binary data
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "/",
+            "Accept-Encoding": "gzip, deflate, br",
+            Connection: "keep-alive",
+          },
         }
       );
 
@@ -39,23 +42,20 @@ const SubmitButton = ({ definedStops }) => {
       {pdfData && (
         <div>
           <p>PDF generated! Choose an option:</p>
-          <button
-        className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-full shadow-md transition duration-300 ease-in-out mt-5">
-          <a href={pdfData} target="_blank" rel="noopener noreferrer">
-            View PDF
-          </a>{" "}
-          </button>
-          {" "}
-          <button
-        className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-full shadow-md transition duration-300 ease-in-out mt-5">
-          <a
-            href={pdfData}
-            download="export.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Download PDF
-          </a>
+          <button className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-full shadow-md transition duration-300 ease-in-out mt-5">
+            <a href={pdfData} target="_blank" rel="noopener noreferrer">
+              View PDF
+            </a>{" "}
+          </button>{" "}
+          <button className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-full shadow-md transition duration-300 ease-in-out mt-5">
+            <a
+              href={pdfData}
+              download="export.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download PDF
+            </a>
           </button>
         </div>
       )}
