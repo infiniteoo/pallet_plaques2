@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+const createTemplate = require("./create-template.jsx");
+
 
 const SubmitButton = ({ definedStops }) => {
   const [pdfData, setPdfData] = useState(null);
@@ -8,8 +10,9 @@ const SubmitButton = ({ definedStops }) => {
     console.log("Submit button clicked");
 
     try {
+   
       const response = await axios.post(
-        "http://localhost:8000/api/stops",
+        "http://164.92.107.159/api/stops",
         definedStops,
         {
           responseType: "blob", // Request the response as binary data
