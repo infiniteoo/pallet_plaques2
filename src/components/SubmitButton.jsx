@@ -11,7 +11,7 @@ const SubmitButton = ({ definedStops }) => {
       const response = await axios.post(
         process.env.REACT_APP_ENVIRONMENT === "development"
           ? process.env.REACT_APP_LOCAL_URL
-          : "http://164.92.107.159/api/stops",
+          : "https://164.92.107.159/api/stops",
         definedStops,
         {
           responseType: "blob", // Request the response as binary data
