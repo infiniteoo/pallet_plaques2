@@ -10,28 +10,28 @@ function parseData(data) {
           items.push(currentItem);
           currentItem = {};
         }
-        if (!currentItem['Source']) {
-          currentItem['Source'] = trimmedLine;
-        } else if (!currentItem['Customer']) {
-          currentItem['Customer'] = trimmedLine;
-        } else if (!currentItem['PO Number']) {
-          currentItem['PO Number'] = trimmedLine;
-        } else if (!currentItem['Order Number']) {
-          currentItem['Order Number'] = trimmedLine;
-        } else if (!currentItem['Pick Up Date']) {
-          currentItem['Pick Up Date'] = trimmedLine;
-        } else if (!currentItem['Due Date']) {
-          currentItem['Due Date'] = trimmedLine;
-        } else if (!currentItem['Shipment Number']) {
-          currentItem['Shipment Number'] = trimmedLine;
-        } else if (!currentItem['Carrier']) {
-          currentItem['Carrier'] = trimmedLine;
-        } else if (!currentItem['Number of Pallets']) {
-          currentItem['Number of Pallets'] = trimmedLine;
-        } else if (!currentItem['Delivery Sequence']) {
-          currentItem['Delivery Sequence'] = trimmedLine;
-        } else if (!currentItem['Region']) {
-          currentItem['Region'] = trimmedLine;
+        if (!currentItem['source']) {
+          currentItem['source'] = trimmedLine;
+        } else if (!currentItem['customer']) {
+          currentItem['customer'] = trimmedLine;
+        } else if (!currentItem['ponumber']) {
+          currentItem['ponumber'] = trimmedLine;
+        } else if (!currentItem['ordernumber']) {
+          currentItem['ordernumber'] = trimmedLine;
+        } else if (!currentItem['pickupdate']) {
+          currentItem['pickupdate'] = trimmedLine;
+        } else if (!currentItem['duedate']) {
+          currentItem['duedate'] = trimmedLine;
+        } else if (!currentItem['shipmentnumber']) {
+          currentItem['shipmentnumber'] = trimmedLine;
+        } else if (!currentItem['carrier']) {
+          currentItem['carrier'] = trimmedLine;
+        } else if (!currentItem['numberofpallets']) {
+          currentItem['numberofpallets'] = trimmedLine;
+        } else if (!currentItem['deliverysequence']) {
+          currentItem['deliverysequence'] = trimmedLine;
+        } else if (!currentItem['region']) {
+          currentItem['region'] = trimmedLine;
         }
       }
     }
