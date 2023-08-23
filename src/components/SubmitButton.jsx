@@ -15,9 +15,7 @@ const SubmitButton = ({ definedStops }) => {
           responseType: "blob", // Request the response as binary data
           headers: {
             "Content-Type": "application/json",
-            Accept: "/",
-            "Accept-Encoding": "gzip, deflate, br",
-            Connection: "keep-alive",
+          
           },
         }
       );
