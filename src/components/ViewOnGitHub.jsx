@@ -9,7 +9,7 @@ const ViewOnGitHub = () => {
           e.target.style.cursor = "pointer";
         }}
         onClick={() => {
-          window.open("https://github.com/infiniteoo/pallet_plaques");
+          window.open("https://github.com/infiniteoo/pallet_plaques2");
         }}
       >
         <div className="w-8 h-8">

@@ -1,42 +1,33 @@
-import React, {useState} from "react";
-import parseData from './parseData.js';
+import React, { useState } from "react";
+import parseData from "./parseData.js";
 import axios from "axios";
 
-
-
 const PasteBox = ({ value, onChange }) => {
+  const [pdfData, setPdfData] = useState(null);
 
-    const [pasteData, setPasteData] = useState(null);
-    const [pdfData, setPdfData] = useState(null);
-
-    const handleChange = async (event) => {
-        console.log("event.target.value", event.target.value);
-        setPasteData(parseData(event.target.value));
-        
-        try {
-          const response = await axios.post(
-            process.env.REACT_APP_ENVIRONMENT === "development"
-              ? process.env.REACT_APP_LOCAL_PASTA
-              : "https://164.92.107.159/api/copypasta",
-              parseData(event.target.value),
-            {
-              responseType: "blob", // Request the response as binary data
-              headers: {
-                "Content-Type": "application/json",
-              },
-            }
-          );
-    
-          const pdfBlob = new Blob([response.data], { type: "application/pdf" });
-          const pdfUrl = URL.createObjectURL(pdfBlob);
-    
-          setPdfData(pdfUrl);
-        } catch (error) {
-          console.error("Error generating PDF:", error);
+  const handleChange = async (event) => {
+    try {
+      const response = await axios.post(
+        process.env.REACT_APP_ENVIRONMENT === "development"
+          ? process.env.REACT_APP_LOCAL_PASTA
+          : "https://164.92.107.159/api/copypasta",
+        parseData(event.target.value),
+        {
+          responseType: "blob", // Request the response as binary data
+          headers: {
+            "Content-Type": "application/json",
+          },
         }
-       
-    };
+      );
 
+      const pdfBlob = new Blob([response.data], { type: "application/pdf" });
+      const pdfUrl = URL.createObjectURL(pdfBlob);
+
+      setPdfData(pdfUrl);
+    } catch (error) {
+      console.error("Error generating PDF:", error);
+    }
+  };
 
   return (
     <>

@@ -1,70 +1,126 @@
-# Getting Started with Create React App
+# Related Projects
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a continuation of the original repo, which was scrapped:
+https://github.com/infiniteoo/pallet_plaques
 
-## Available Scripts
+Here is the backend server repo used to handle the PDF generation requests:
+https://github.com/infiniteoo/pp_backend
 
-In the project directory, you can run:
 
-### `npm start`
+INTRODUCING..
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+ 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+ 🥁🥁🥁🥁
 
-### `npm test`
+drumroll please​
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ 🥁🥁🥁🥁
 
-### `npm run build`
+ 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Pallet Plaques - Automatic Pallet Tag Generator
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+https://www.palletplaques.com
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Try it Yourself
+* clone the repo and download it locally
+* npm install in the project directory
+* npm run start
+* download the backend repo
+* npm install in that project directory
+* npm run start
+* front end client runs on at localhost:3000, server at localhost:8122
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Written entirely by me in the React and Node.js frameworks, this app quickly and easily generates high quality, professional pallet tags at the drop of a button:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<!-- 1 -->
+[<img src="./readme_assets/1.png">]
+If you copy and paste the data ...
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<!-- 2 -->
+ <img src="./readme_assets/2.png">]
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+... into the "Paste Data Here" field:
 
-### Code Splitting
+ 
+<!-- 3 -->
+<img src="./readme_assets/3.png">]
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+ 
 
-### Analyzing the Bundle Size
+ 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+a few seconds later, "view pdf" and "download pdf" buttons appear:
 
-### Making a Progressive Web App
+ 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<!-- 4 -->
+<img src="./readme_assets/4.png">]
+ 
 
-### Advanced Configuration
+ 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+click "view pdf" and see the awesome tags that are generated:
 
-### Deployment
+ <!-- 5 -->
+<img src="./readme_assets/5.png">]
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+ 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+at that point, you are ready to send that entire batch of automatically generated pallet tags to the printer.
+
+ 
+
+If we are able to receive our Costco datapoints exactly how Patrick sent them yesterday, all you have to do is copy and paste, and my app takes care of the rest. 
+
+ 
+
+Try it for yourself, go to palletplaques.com and enter the data.  Patrick's email is attached to this one for quick access to his provided spreadsheet cells.
+
+ 
+
+That's not all!
+
+ 
+
+There is also a more manually intensive method to generating pallet tags.
+
+ 
+
+From the dropdown box on the web site, you'll see all of our Costco's we deliver to.  Select one, then select a random pallet amount for that stop, and finally, enter a fake order number.  Hit the big plus icon on the right to create another stop.
+
+ 
+<!-- 6 -->
+
+<img src="./readme_assets/6.png">]
+ 
+
+Do this a few more times then select "Generate PDF":
+
+ 
+
+<!-- 7 -->
+<img src="./readme_assets/7.png">]
+ 
+
+a few seconds later, the same "view" and "download" buttons appear, generating pallet tags.  
+
+ 
+<!-- 8 -->
+
+<img src="./readme_assets/8.png">]
+ 
+
+ 
+
+ 
+
+Unfortunately, the data these pallet tags provide is limited by whatever the user enters on the website.  The more data to enter, the more cumbersome the process becomes.
+

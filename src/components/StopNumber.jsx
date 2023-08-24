@@ -1,6 +1,6 @@
 import React from "react";
 
-const StopNumber = ({numberOfStops, stop}) => {
+const StopNumber = ({ numberOfStops, stop }) => {
   return (
     <>
       <label
