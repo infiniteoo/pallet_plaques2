@@ -7,6 +7,9 @@ const PasteBox = ({ value, onChange }) => {
 
   const handleChange = async (event) => {
     try {
+     
+      console.log("event.target.value", event.target.value);
+
       const response = await axios.post(
         process.env.REACT_APP_ENVIRONMENT === "development"
           ? process.env.REACT_APP_LOCAL_PASTA

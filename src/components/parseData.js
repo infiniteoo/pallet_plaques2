@@ -2,11 +2,13 @@ function parseData(data) {
   const lines = data.split(/\s{2,}/); // Split data into lines
   const items = [];
   let currentItem = {};
+  console.log('lines', lines);
+  
 
   for (const line of lines) {
     const trimmedLine = line.trim();
     if (trimmedLine !== "") {
-      if (Object.keys(currentItem).length === 11) {
+      if (Object.keys(currentItem).length === 10) {
         items.push(currentItem);
         currentItem = {};
       }
@@ -30,8 +32,6 @@ function parseData(data) {
         currentItem["numberofpallets"] = trimmedLine;
       } else if (!currentItem["deliverysequence"]) {
         currentItem["deliverysequence"] = trimmedLine;
-      } else if (!currentItem["region"]) {
-        currentItem["region"] = trimmedLine;
       }
     }
   }
