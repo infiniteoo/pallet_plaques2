@@ -13,7 +13,7 @@ const PasteBox = ({ value, onChange }) => {
       const response = await axios.post(
         process.env.REACT_APP_ENVIRONMENT === "development"
           ? process.env.REACT_APP_LOCAL_PASTA
-          : "https://164.92.107.159/api/copypasta",
+          : "https://palletplaques.com/api/copypasta",
         parseData(event.target.value),
         {
           responseType: "blob", // Request the response as binary data
