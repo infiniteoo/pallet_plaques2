@@ -29,7 +29,7 @@ const PDF = ({ data }) => {
               { style: styles.topContainer },
               React.createElement(ReactPDF.Image, {
                 style: styles.image,
-                src: "GXO_logo.png",
+                src: "./server/GXO_logo.png",
               }),
 
               React.createElement(
@@ -62,7 +62,7 @@ const PDF = ({ data }) => {
               // new column
               React.createElement(ReactPDF.Image, {
                 style: styles.dairyImage,
-                src: "darigold_logo.png",
+                src: "./server/darigold_logo.png",
               })
             ),
 

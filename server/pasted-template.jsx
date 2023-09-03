@@ -58,7 +58,7 @@ const PDF = ({ data }) => {
               // new column
               React.createElement(ReactPDF.Image, {
                 style: styles.dairyImage,
-                src: "GXO_logo.png",
+                src: "./server/GXO_logo.png",
               })
             ),
 
