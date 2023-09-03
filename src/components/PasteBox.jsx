@@ -12,7 +12,7 @@ const PasteBox = ({ value, onChange }) => {
 
       const response = await axios.post(
         process.env.REACT_APP_ENVIRONMENT === "development"
-          ? process.env.REACT_APP_LOCAL_PASTA
+          ? "http://localhost:3000/api/copypasta"
           : "https://palletplaques.com/api/copypasta",
         parseData(event.target.value),
         {

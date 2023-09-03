@@ -10,7 +10,7 @@ const SubmitButton = ({ definedStops }) => {
     try {
       const response = await axios.post(
         process.env.REACT_APP_ENVIRONMENT === "development"
-          ? process.env.REACT_APP_LOCAL_URL
+          ? "http://localhost:3000/api/stops"
           : "https://palletplaques.com/api/stops",
         definedStops,
         {
