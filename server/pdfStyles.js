@@ -99,7 +99,7 @@ const styles = ReactPDF.StyleSheet.create({
     justifyContent: "space-between", // Space out evenly
   },
   dairyImage: {
-    height: "50%",
+    height: "40%",
     marginTop: 15
   },
   dairyText: {
